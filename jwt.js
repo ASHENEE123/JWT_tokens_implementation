@@ -46,7 +46,7 @@ app.post("/check",async(req,res)=>{
 })
 
 
-app.get("/route",(req,res)=>{
+app.get("/dashboard",(req,res)=>{
     const sign = req.headers.authorization
     if(!sign){
         return res.status(401).json({message:"no authorization provided"})
@@ -72,3 +72,4 @@ app.listen(3000,(err)=>{
     console.log("success")
 
 })
+
