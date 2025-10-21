@@ -5,7 +5,7 @@ const crypt=require("bcrypt")
 app.set("view engine","ejs")
 app.use(ser.urlencoded({extended:true}))
 const arr=[];
-const secret="nikhil";
+const secret="My_secret _key"; # can be changed as it is used to hash the tokens 
 app.get("/register",(req,res)=>{
     res.render("index")
 })
@@ -70,4 +70,5 @@ catch(err){
 app.listen(3000,(err)=>{
     if (err) throw err;
     console.log("success")
+
 })
